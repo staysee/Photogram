@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Add bootstrap
+gem 'bootstrap-sass', '~> 3.3.5'
 #Add paperclip
 gem 'paperclip', '~> 4.3'
 #Add Simple form
