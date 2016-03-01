@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Add paperclip
+gem 'paperclip', '~> 4.3'
 #Add Simple form
 gem 'simple_form'
 #Adding factory girl
