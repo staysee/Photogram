@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 #Add paperclip
 gem 'paperclip', '~> 4.3'
 #Add Simple form
-gem 'simple_form'
+gem 'simple_form', '~> 3.1.0'
 #Adding factory girl
 gem 'factory_girl_rails'
 # Adding Capybara
