@@ -1,4 +1,7 @@
 class Post < ActiveRecord::Base
+  validates :user_id, presence: true
+  belongs_to :user
+
   validates :image, presence: true #must attach image to form
 
   has_attached_file :image, styles: { :medium => "640x" } #resize image to 640px wide
