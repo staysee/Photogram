@@ -33,13 +33,18 @@
 
               <% if comment.user == current_user %>
                 <%= link_to post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" } do %>
-
+                <span class="glyphicon glypicon-remove delete-comment"></span>
+                <% end %>
               <% end %>
             </div>
           <% end %>
         <% end %>
 
-        <div class="comment-form">
+      <div class="comment-like-form row">
+        <div class="like-button col-sm-1">
+          <span class="glypicon glyphicon-heart-empty"></span>
+        </div>
+        <div class="comment-form col-sm-11">
           <%= form_for [post, post.comments.new] do |f| %>
             <%= f.text_field :content, placeholder: 'Add a comment...' %>
           <% end %>
