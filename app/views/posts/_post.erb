@@ -1,23 +1,15 @@
-<h1>Photogram</h1>
-
-<div class="posts-wrapper row">
-  <% @posts.each do |post| %>
-    <div class="post">
+<div class="posts-wrapper">
+  <div class="post">
 
       <div class="post-head">
         <div class="thumb-img"></div>
-
-        <div class="user_name">
-          <%= post.user.user_name %>
-        </div>
-
-        <div class="time-ago">
-          <%= time_ago_in_words post.created_at %> ago
+        <div class="user-name">
+          <%= @post.user.user_name %>
         </div>
       </div>
 
       <div class="image center-block">
-        <%= link_to (image_tag post.image.url(:medium), class: 'img-responsive'), post_path(post) %>
+        <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
       </div>
 
       <div class="post-bottom">
@@ -40,7 +32,8 @@
               </div>
 
               <% if comment.user == current_user %>
-                <%= link_to post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" } %>
+                <%= link_to post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" } do %>
+
               <% end %>
             </div>
           <% end %>
@@ -53,6 +46,6 @@
         </div>
       </div>
 
-    </div>
-  <% end %>
+  </div>
 </div>
+
