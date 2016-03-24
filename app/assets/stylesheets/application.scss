@@ -21,6 +21,7 @@ body {
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
+// NAV STYLES //
 .navbar-brand {
   a {
     color: #125688;
@@ -40,9 +41,12 @@ body {
   margin: 0 auto;
 }
 
+// POST STYLES //
 .posts-wrapper {
   padding-top: 40px;
   margin: 0 auto;
+  max-width: 642px;
+  width: 100%
 }
 
 .post {
@@ -52,23 +56,25 @@ body {
   border-radius: 3px;
   border-width: 1px;
   margin-bottom: 60px;
-}
 
-.post-head {
-  height: 64px;
-  padding: 14px 20px;
-  color: #125688;
-  font-size: 15px;
-  line-height: 18px;
-  .thumbnail {}
-  .name {
-    display: block;
+  .post-head {
+    height: 64px;
+    padding: 14px 20px;
+    color: #125688;
+    font-size: 15px;
+    line-height: 18px;
+
+    .thumbnail {}
+
+    .name {
+      display: block;
+    }
   }
-}
 
-.image {
-  border-bottom: 1px solid #eeefef;
-  border-top: 1px solid #eeefef;
+  .image {
+    border-bottom: 1px solid #eeefef;
+    border-top: 1px solid #eeefef;
+  }
 }
 
 .caption {
@@ -78,6 +84,7 @@ body {
 
 }
 
+// WRAPPER & STYLES for New & Edit views //
 .form-wrapper {
   width: 60%;
   margin: 20px auto;
