@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-#Ad devise for auth
+#Add Turbolinks for AJAX
+gem 'jquery-turbolinks'
+#Add devise for auth
 gem 'devise'
 #Add bootstrap
 gem 'bootstrap-sass', '~> 3.3.5'

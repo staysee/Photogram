@@ -17,10 +17,12 @@
 
       <div class="post-bottom">
         <div class="caption">
+          <div class="caption-content">
             <div class="user-name">
               <%= post.user.user_name %>
             </div>
             <%= post.caption %>
+          </div>
         <div class="comments" id="comments_<%= post.id %>">
           <% if post.comments %>
             <%= render post.comments, post: post %>
@@ -35,7 +37,7 @@
           <span class="glyphicon glyphicon-heart-empty"></span>
         </div>
         <div class="comment-form col-sm-11">
-          <%= form_for ([post, post.comments.build], remote: true) do |f| %>
+          <%= form_for( [post, post.comments.build], remote: true ) do |f| %>
             <%= f.text_field :content, placeholder: 'Add a comment...' %>
           <% end %>
         </div>

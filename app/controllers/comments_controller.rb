@@ -12,16 +12,19 @@ class CommentsController < ApplicationController
       end
     else
       flash[:alert] = "Check the comment form, something went wrong."
-      render root_path
+      redirect_to root_path
     end
   end
 
   def destroy
     @comment = @post.comments.find(params[:id])
-
-      @comment.destroy
-      flash[:success] = "Comment deleted."
-      redirect_to root_path
+    if @comment.user_id == current_user.id
+      @comment.delete
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
+    end
   end
 
 
