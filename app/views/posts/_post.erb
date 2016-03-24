@@ -6,6 +6,9 @@
         <div class="user-name">
           <%= post.user.user_name %>
         </div>
+        <div class="time-ago">
+          <%= time_ago_in_words post.created_at %> ago
+        </div>
       </div>
 
       <div class="image center-block">
